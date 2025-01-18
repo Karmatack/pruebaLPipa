@@ -1,0 +1,139 @@
+/* ========== RESETEO BÁSICO ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== GRID CONTENEDOR ========== */
+.editorial {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas iguales en desktop */
+  grid-template-rows: repeat(2, 40vh); /* Dos filas en desktop */
+  gap: 0; /* Sin espacio entre los elementos */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+}
+
+.editorial a {
+  display: block; /* Convierte el enlace en un bloque completo */
+  text-decoration: none; /* Elimina el subrayado */
+  color: inherit; /* Mantiene el color del texto */
+}
+
+/* ========== ITEMS DEL GRID ========== */
+.item {
+  position: relative;
+  overflow: hidden;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen llene su espacio sin deformarse */
+  
+}
+
+/* ========== TEXTO SUPERPUESTO ========== */
+.text-overlay {
+  position: absolute;
+  top: 50%; /* Posiciona verticalmente al centro */
+  left: 50%; /* Posiciona horizontalmente al centro */
+  transform: translate(-50%, -50%); /* Ajusta el punto de referencia al centro */
+  color: #fff;
+  font-size: 1.5rem; /* Tamaño del texto ajustado */
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  text-align: center; /* Asegura que el texto esté centrado si es más largo */
+}
+
+/* ========== POSICIONES EN EL GRID (Desktop y Tablets) ========== */
+.item-vestidos {
+  grid-column: 1; /* Primera columna */
+  grid-row: 1; /* Primera fila */
+}
+
+.item-sets {
+  grid-column: 2; /* Segunda columna */
+  grid-row: 1; /* Primera fila */
+}
+
+.item-abrigos {
+  grid-column: 3 / span 2; /* Ocupa la tercera y cuarta columna */
+  grid-row: 1 / span 2; /* Ocupa ambas filas */
+}
+
+.item-novia {
+  grid-column: 1 / span 2; /* Ocupa dos columnas (1 y 2) */
+  grid-row: 2; /* Segunda fila */
+}
+
+/* ========== DISEÑO RESPONSIVO PARA TABLETS ========== */
+@media (max-width: 1024px) {
+  .editorial {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-rows: repeat(3, auto); /* Ajusta la altura automáticamente */
+    gap: 5px; /* Espacio entre filas */
+  }
+
+  .item-vestidos {
+    grid-column: 1; /* Primera columna */
+    grid-row: 1; /* Primera fila */
+    height: 200px; /* Ajusta la altura */
+  }
+
+  .item-sets {
+    grid-column: 2; /* Segunda columna */
+    grid-row: 1; /* Primera fila */
+    height: 200px; /* Ajusta la altura */
+  }
+
+  .item-abrigos {
+    grid-column: 1 / span 2; /* Ocupa ambas columnas */
+    grid-row: 2; /* Segunda fila */
+    height: 250px; /* Ajusta la altura */
+  }
+
+  .item-novia {
+    grid-column: 1 / span 2; /* Ocupa ambas columnas */
+    grid-row: 3; /* Tercera fila */
+    height: 200px; /* Ajusta la altura */
+  }
+}
+
+/* ========== DISEÑO RESPONSIVO PARA CELULARES ========== */
+@media (max-width: 767px) {
+  .editorial {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-rows: repeat(3, auto); /* Tres filas */
+    gap: 5px; /* Espacio entre filas */
+  }
+
+  .item-vestidos {
+    grid-column: 1; /* Primera columna */
+    grid-row: 1; /* Primera fila */
+    height: 150px; /* Altura ajustada */
+  }
+
+  .item-sets {
+    grid-column: 2; /* Segunda columna */
+    grid-row: 1; /* Primera fila */
+    height: 150px; /* Altura ajustada */
+  }
+
+  .item-abrigos {
+    grid-column: 1 / span 2; /* Ocupa ambas columnas */
+    grid-row: 2; /* Segunda fila */
+    height: 300px; /* Altura mayor */
+  }
+
+  .item-novia {
+    grid-column: 1 / span 2; /* Ocupa ambas columnas */
+    grid-row: 3; /* Tercera fila */
+    height: 200px; /* Altura ajustada */
+  }
+
+  .item img {
+    height: 100%; /* Asegura que las imágenes se adapten al espacio */
+  }
+}

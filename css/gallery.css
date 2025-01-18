@@ -1,0 +1,210 @@
+/* Estilos globales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Grid principal */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas por defecto */
+  gap: 16px;
+  padding: 20px;
+}
+
+/* Tarjetas (cards) */
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Contenedores de imágenes y videos */
+.image-container img,
+.video-container video {
+  width: 100%;
+  height: auto;
+}
+
+/* Botones de navegación */
+.navigation-buttons {
+  position: absolute;
+  top: 40%; /* Centro vertical */
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%); /* Ajusta al centro exacto */
+  display: flex;
+  justify-content: space-between; /* Alinea izquierda y derecha */
+  pointer-events: none; /* Evita interacción fuera del hover */
+  opacity: 0; /* Oculto por defecto */
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .navigation-buttons {
+  pointer-events: auto; /* Permite interacción */
+  opacity: 1; /* Muestra los botones al pasar el ratón */
+}
+
+.navigation-buttons button {
+  background: transparent; /* Fondo transparente */
+  color: black; /* Solo se ve el símbolo */
+  border: none;
+  font-size: 24px; /* Tamaño del símbolo */
+  cursor: pointer;
+  pointer-events: auto; /* Permite clic en los botones */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation-buttons button:hover {
+  color: #ddd; /* Cambia ligeramente el color al pasar el ratón */
+}
+
+.navigation-buttons button:disabled {
+  display: none; /* Oculta el botón si está deshabilitado */
+}
+
+.navigation-buttons .prev {
+  position: absolute;
+  left: 10px; /* Siempre a la izquierda */
+}
+
+.navigation-buttons .next {
+  position: absolute;
+  right: 10px; /* Siempre a la derecha */
+}
+
+/* Texto de título y precio */
+.card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.card p {
+  font-size: 16px;
+  color: #555;
+  display: flex; /* Flexbox para alinear precios en una línea */
+  justify-content: flex-start; /* Alinea los precios al centro */
+  gap: 10px; /* Espacio entre los precios */
+}
+
+.card p span {
+  display: inline; /* Evita saltos de línea */
+}
+
+.card p span:first-child {
+  color: red;
+  font-weight: bold;
+}
+
+.card p span:last-child {
+  text-decoration: line-through;
+  color: grey;
+}
+
+/* Capa de tallas (size overlay) */
+/* Se posiciona sobre la imagen o video */
+.image-container,
+.video-container {
+  position: relative; /* Contenedor relativo para posicionar la capa */
+}
+
+.size-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* Se ajusta la altura de forma automática con un mínimo definido */
+  height: auto;
+  min-height: 50px;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Oculto por defecto */
+  transition: opacity 0.3s ease;
+  padding: 10px;
+}
+
+.image-container:hover .size-overlay,
+.video-container:hover .size-overlay {
+  opacity: 1; /* Se muestra al pasar el ratón */
+}
+
+.size-overlay h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Grilla de tallas: 5 columnas para pantallas grandes (generando 2 filas con 10 elementos) */
+.size-overlay .size-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+.size-overlay .size-grid span {
+  font-size: 14px;
+  color: #333;
+  padding: 5px 0;
+  cursor: pointer; /* Cambia el cursor al pasar sobre las tallas */
+  transition: color 0.3s ease;
+}
+
+.size-overlay .size-grid span:hover {
+  color: #007BFF; /* Cambio de color al pasar el ratón */
+}
+
+/* Media Queries para la responsividad */
+
+/* Para pantallas medianas, el grid principal cambia */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Para dispositivos pequeños */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* O puedes cambiar a 1 columna si lo prefieres */
+  }
+  
+  /* Ajustes en la capa de tallas */
+  .size-overlay {
+    padding: 5px;
+  }
+  
+  .size-overlay h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  /* En pantallas pequeñas se pasan a 3 columnas para evitar que se muestre en 1 sola */
+  .size-overlay .size-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+  
+  .size-overlay .size-grid span {
+    font-size: 12px;
+    padding: 3px 0;
+  }
+}

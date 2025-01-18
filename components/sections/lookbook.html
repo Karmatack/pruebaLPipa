@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Product View</title>
+  <link rel="stylesheet" href="/css/lookbook.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Left Section: Image with Markers -->
+    <div class="image-section">
+      <img id="main-image" src="/assets/images/lookbook/principal.webp" alt="Main Product" class="main-image" />
+      <!-- Minimal markers -->
+      <div class="marker" data-index="0" style="top: 30%; left: 35%;"></div>
+      <div class="marker" data-index="1" style="top: 50%; left: 42%;"></div>
+      <div class="marker" data-index="2" style="top: 70%; left: 32%;"></div>
+    </div>
+
+    <!-- Right Section: Product Details -->
+    <div class="details-section">
+      <div class="product-info">
+        <img id="product-image" src="/assets/images/lookbook/principal.webp" alt="Product Image" class="detail-image" />
+        <h2 id="product-title">ABRIGO VENUS</h2>
+        <p id="product-price">S/. 570.00</p>
+      </div>
+      <div class="navigation">
+        <button class="nav-button prev">&lt;</button>
+        <button class="nav-button next">&gt;</button>
+      </div>
+    </div>
+  </div>
+  <script src="/js/lookbook.js"></script>
+</body>
+</html>

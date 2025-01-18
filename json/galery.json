@@ -1,0 +1,116 @@
+[
+    {
+      "type": "image",
+      "title": "FALDA DUNE",
+      "price": "S/. 527.00",
+      "discountPrice": "S/. 396.00",
+      "images": [
+        "/assets/images/product-gallery/1-1.webp",
+        "/assets/images/product-gallery/1-2.webp",
+        "/assets/images/product-gallery/1-3.webp"
+      ]
+    },
+    {
+      "type": "video",
+      "title": "VESTIDO SIRACUSA",
+      "price": "S/. 747.00",
+      "video": "/assets/images/product-gallery/2.mp4"
+    },
+    {
+      "type": "image",
+      "title": "ABRIGO VENUS",
+      "price": "S/. 571.00",
+      "images": [
+        "/assets/images/product-gallery/3-1.webp",
+        "/assets/images/product-gallery/3-2.webp",
+        "/assets/images/product-gallery/3-3.webp"
+      ]
+    },
+    {
+      "type": "image",
+      "title": "VESTIDO NABUCO",
+      "price": "S/. 747.00",
+      "discountPrice": "S/. 659.00",
+      "images": [
+        "/assets/images/product-gallery/4-1.webp",
+        "/assets/images/product-gallery/4-2.webp",
+        "/assets/images/product-gallery/4-3.webp"
+      ]
+    },
+    {
+      "type": "video",
+      "title": "VESTIDO VIENA",
+      "price": "S/. 791.00",
+      "video": "/assets/images/product-gallery/5.mp4"
+    },
+    {
+      "type": "image",
+      "title": "VESTIDO TURANDOT",
+      "price": "S/. 747",
+      "images": [
+        "/assets/images/product-gallery/6-1.webp",
+        "/assets/images/product-gallery/6-2.webp",
+        "/assets/images/product-gallery/6-3.webp"
+      ]
+    },
+    {
+      "type": "image",
+      "title": "VESTIDO JULIETA MARFIL",
+      "price": "S/. 875.00",
+      "images": [
+        "/assets/images/product-gallery/7-1.webp",
+        "/assets/images/product-gallery/7-2.webp",
+        "/assets/images/product-gallery/7-3.webp"
+      ]
+    },
+    {
+      "type": "video",
+      "title": "VESTIDO SIRACUSA",
+      "price": "S/. 747.00",
+      "video": "/assets/images/product-gallery/8.mp4"
+    },
+    {
+      "type": "image",
+      "title": "VESTIDO DAISY",
+      "price": "S/. 747.00",
+      "discountPrice": "S/. 659.00",
+      "images": [
+        "/assets/images/product-gallery/9-1.webp",
+        "/assets/images/product-gallery/9-2.webp",
+        "/assets/images/product-gallery/9-3.webp"
+      ]
+    },
+    {
+      "type": "image",
+      "title": "VESTIDO SALIMA",
+      "price": "S/. 747.00",
+      "images": [
+        "/assets/images/product-gallery/10-1.webp",
+        "/assets/images/product-gallery/10-2.webp",
+        "/assets/images/product-gallery/10-3.webp"
+      ]
+    },
+    {
+      "type": "image",
+      "title": "TOP DUNE",
+      "price": "S/. 396.00",
+      "discountPrice": "S/. 352.00",
+      "images": [
+        "/assets/images/product-gallery/11-1.webp",
+        "/assets/images/product-gallery/11-2.webp",
+        "/assets/images/product-gallery/11-3.webp"
+      ]
+    },
+    {
+      "type": "image",
+      "title": "TOP ALSACIA",
+      "price": "S/. 440.00",
+      "discountPrice": "S/. 352.00",
+      "images": [
+        "/assets/images/product-gallery/12-1.webp",
+        "/assets/images/product-gallery/12-2.webp",
+        "/assets/images/product-gallery/12-3.webp"
+      ]
+    }
+  ]
+  

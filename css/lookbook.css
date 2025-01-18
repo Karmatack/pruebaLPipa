@@ -1,0 +1,102 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    display: flex;
+    gap: 40px; /* Espacio reducido entre las secciones */
+    max-width: 1000px; /* Limitar el ancho total */
+    padding: 20px;
+  }
+  
+  .image-section {
+    position: relative;
+    flex: 1; /* Sección izquierda más pequeña */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-image {
+    width: 100%; /* Imagen más pequeña */
+    border-radius: 10px;
+    display: block;
+  }
+  
+  .marker {
+    position: absolute;
+    width: 12px; /* Markers más pequeños */
+    height: 12px;
+    background: white; /* Color con opacidad */
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .marker:hover {
+    transform: scale(1.2);
+    background-color: #ff5722;
+  }
+  
+  .details-section {
+    flex: 0.8; /* La sección derecha sigue siendo más pequeña */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .detail-image {
+    width: 90%; /* Imagen en la tarjeta */
+    margin-bottom: 10px;
+  }
+  
+  .product-info {
+    text-align: left;
+  }
+  
+  .product-info h2 {
+    font-size: 1.4rem; /* Texto más pequeño */
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .product-info p {
+    font-size: 0.9rem; /* Texto más pequeño */
+    color: #555;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  
+  .nav-button {
+    width: 30px; /* Botones más pequeños */
+    height: 30px;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .nav-button:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
